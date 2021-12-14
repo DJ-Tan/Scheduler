@@ -15,13 +15,13 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tempnus.TempNus">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduler.test.SchedulerController">
     <left>
         <AnchorPane prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: #A9A9A9;" BorderPane.alignment="CENTER">
             <children>
                 <ImageView fitHeight="400.0" fitWidth="400.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@/drawable/logo.png" />
+                        <Image url="@logo.png" />
                     </image>
                 </ImageView>
             </children>
@@ -37,7 +37,7 @@
                 </Label>
                 <ImageView fitHeight="55.0" fitWidth="100.0" layoutX="163.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@/drawable/cart.png" />
+                        <Image url="@cart.png" />
                     </image>
                 </ImageView>
                 <Button layoutX="502.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" style="-fx-background-color: transparent; -fx-text-fill: #A9A9A9; -fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;" text="Cancel">
@@ -52,7 +52,7 @@
                 </Label>
                 <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@/drawable/users.png" />
+                        <Image url="@users.png" />
                     </image>
                 </ImageView>
                 <TextField layoutX="150.0" layoutY="100.0" prefHeight="30.0" prefWidth="300.0" promptText="Username / Email" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
@@ -67,7 +67,7 @@
                 </PasswordField>
                 <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@/drawable/lock.png" />
+                        <Image url="@lock.png" />
                     </image>
                 </ImageView>
                 <CheckBox layoutX="150.0" layoutY="195.0" mnemonicParsing="false" style="-fx-text-fill: #A9A9A9;" text="Remember Me">
@@ -93,7 +93,7 @@
                 </Label>
                 <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@/drawable/users.png" />
+                        <Image url="@users.png" />
                     </image>
                 </ImageView>
                 <TextField fx:id="signUpUser" layoutX="150.0" layoutY="320.0" prefHeight="30.0" prefWidth="300.0" promptText="Username" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
@@ -103,7 +103,7 @@
                 </TextField>
                 <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@/drawable/email.png" />
+                        <Image url="@email.png" />
                     </image>
                 </ImageView>
                 <TextField fx:id="signUpEmail" layoutX="150.0" layoutY="360.0" prefHeight="30.0" prefWidth="300.0" promptText="Email" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
@@ -118,7 +118,7 @@
                 </PasswordField>
                 <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@/drawable/lock.png" />
+                        <Image url="@lock.png" />
                     </image>
                 </ImageView>
                 <PasswordField fx:id="signUpRPass" layoutX="150.0" layoutY="440.0" prefHeight="30.0" prefWidth="300.0" promptText="Repeat Password" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
