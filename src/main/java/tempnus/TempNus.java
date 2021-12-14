@@ -1,6 +1,6 @@
-package Scheduler;
+package tempnus;
 
-public class Test {
+public class TempNus {
 
     public static void main(String[] args) {
         System.out.println("Hello World");
