@@ -106,18 +106,13 @@
                         <Font name="SansSerif Regular" size="15.0" />
                      </font>
                   </Label>
-                  <ListView prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" />
+                  <ListView fx:id="taskList35" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" />
                </children>
             </VBox>
             <ListView prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cccccc; -fx-border-color: black; -fx-border-width: 1 0 2 0;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
-      <Button fx:id="helloButton" layoutX="470.0" layoutY="647.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="30.0" prefWidth="60.0" text="Hello!" />
-      <Button fx:id="closeButton" layoutX="470.0" layoutY="647.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefHeight="30.0" prefWidth="60.0" text="Close!" visible="false" />
-      <Label fx:id="welcomeText" layoutX="565.0" layoutY="647.0" prefHeight="30.0" prefWidth="300.0">
-         <font>
-            <Font name="SansSerif Regular" size="20.0" />
-         </font>
-      </Label>
+      <Button layoutX="470.0" layoutY="647.0" mnemonicParsing="false" onAction="#onAddButtonClick" prefHeight="30.0" prefWidth="60.0" text="Add" />
+      <Button layoutX="549.0" layoutY="647.0" mnemonicParsing="false" onAction="#onDelButtonClick" prefHeight="30.0" prefWidth="60.0" text="Delete" />
    </children>
 </Pane>
