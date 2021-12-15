@@ -10,9 +10,9 @@ import java.io.IOException;
 public class TempNus extends Application {
 
     private static final String APP_NAME = "Scheduler";
-    private static final String LOGIN_VIEW = "/layout/login-view.fxml";
-    private static final int APP_WIDTH = 1000;
-    private static final int APP_HEIGHT = 700;
+    private static final String LOGIN_VIEW = "/layout/login_view.fxml";
+    private static final int APP_WIDTH = 600;
+    private static final int APP_HEIGHT = 400;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -26,5 +26,7 @@ public class TempNus extends Application {
     public static void main(String[] args) {
         launch();
     }
+
+    
 
 }
