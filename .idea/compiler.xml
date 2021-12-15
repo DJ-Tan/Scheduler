@@ -6,13 +6,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+<<<<<<< Updated upstream
         <module name="Scheduler.main" />
         <module name="Test" />
       </profile>
     </annotationProcessing>
+=======
+<<<<<<< HEAD
+        <module name="Test" />
+      </profile>
+    </annotationProcessing>
+=======
+        <module name="Scheduler.main" />
+        <module name="Test" />
+      </profile>
+    </annotationProcessing>
+>>>>>>> Stashed changes
     <bytecodeTargetLevel>
       <module name="Scheduler" target="17" />
       <module name="Test (1)" target="17" />
     </bytecodeTargetLevel>
+<<<<<<< Updated upstream
+=======
+>>>>>>> main
+>>>>>>> Stashed changes
   </component>
 </project>
