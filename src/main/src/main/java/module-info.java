@@ -8,4 +8,6 @@ module tempnus {
 
     opens tempnus to javafx.fxml;
     exports tempnus;
+    opens tempnus.ui to javafx.fxml;
+    exports tempnus.ui;
 }
