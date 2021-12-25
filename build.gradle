@@ -3,15 +3,33 @@ plugins {
     id 'application'
     id 'checkstyle'
     id 'com.github.johnrengelman.shadow' version '5.1.0'
+    id "org.openjfx.javafxplugin" version "0.0.10"
 }
+mainClassName = "tempnus.TempNus"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.5.0'
-    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.5.0'
+    implementation 'org.openjfx:javafx-web:17.0.0.1'
+    implementation ('org.jfxtras:jfxtras-all:10.0-r1')
+    implementation ('org.openjfx:javafx-swing:17.0.0.1')
+    implementation ('org.openjfx:javafx-controls:17.0.0.1')
+    implementation ('org.openjfx:javafx:17.0.0.1')
+    implementation ('org.openjfx:javafx-base:17.0.0.1')
+    implementation ('org.openjfx:javafx-graphics:17.0.0.1')
+    implementation ('org.openjfx:javafx-fxml:17.0.0.1')
+    implementation ('org.openjfx:javafx-media:17.0.0.1')
+    implementation ('org.controlsfx:controlsfx:11.1.1')
+    implementation 'com.dlsc.formsfx:formsfx-core:11.4.2'
+    implementation 'org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.8.2'
+    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.8.2'
+}
+
+javafx {
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.web' ]
 }
 
 test {
@@ -28,11 +46,8 @@ test {
     }
 }
 
-application {
-    mainClass.set("seedu.duke.Duke")
-}
-
 shadowJar {
+    mainClassName = "TempNus"
     archiveBaseName = "duke"
     archiveClassifier = null
 }

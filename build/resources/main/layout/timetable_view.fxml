@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tempnus.ui.TimetableGUI">
+   <children>
+      <WebView fx:id="web" layoutX="68.0" layoutY="-118.0" prefHeight="841.0" prefWidth="1101.0" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #393351;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="31.0" prefWidth="1183.0" style="-fx-background-color: #2F2B43;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="112.0" style="-fx-text-fill: #1a84d0; -fx-font-size: 20;" text="TempNUS">
+                     <font>
+                        <Font name="SansSerif Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="31.0" prefWidth="1014.0" />
+                  <Button alignment="TOP_CENTER" minHeight="31.0" minWidth="39.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="46.0" style="-fx-background-color: transparent; -fx-font-size: 20;" />
+               </children>
+            </HBox>
+            <SVGPath content="M116.973 118.027 L 107.096 128.055 143.027 164.027 L 178.958 200.000 143.001 235.999 L 107.045 271.997 117.524 282.476 L 128.003 292.955 164.001 256.999 L 200.000 221.042 235.999 256.999 L 271.997 292.955 282.476 282.476 L 292.955 271.997 256.999 235.999 L 221.042 200.000 256.999 164.001 L 292.955 128.003 282.476 117.524 L 271.997 107.045 235.999 143.001 L 200.000 178.958 164.480 143.479 C 123.238 102.286,129.287 105.526,116.973 118.027" disable="true" fill="#1a84d0" layoutX="944.0" layoutY="-185.0" scaleX="0.08" scaleY="0.08" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
