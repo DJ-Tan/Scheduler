@@ -5,17 +5,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.scene.input.MouseEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Parent;
+
 import java.io.IOException;
 
 public class TempNus extends Application {
 
-    private static final String APP_NAME = "Scheduler";
-    private static final String LOGIN_VIEW = "/layout/timetable_view.fxml";
-    private static final int APP_WIDTH = 600;
-    private static final int APP_HEIGHT = 400;
+    private static final String LOGIN_VIEW = "/layout/profile_view.fxml";
     private double xOffset = 0;
     private double yOffset = 0;
 
@@ -23,7 +18,6 @@ public class TempNus extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(TempNus.class.getResource(LOGIN_VIEW));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle(APP_NAME);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNDECORATED);

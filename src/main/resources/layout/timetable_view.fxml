@@ -2,6 +2,9 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
@@ -9,21 +12,32 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tempnus.ui.TimetableGUI">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1160.0" style="-fx-background-color: #343054;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tempnus.ui.TimetableGUI">
    <children>
-      <WebView fx:id="web" layoutX="68.0" layoutY="-118.0" prefHeight="841.0" prefWidth="1101.0" />
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #393351;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ImageView fx:id="image" fitHeight="841.0" fitWidth="1101.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-118.0" />
+      <WebView fx:id="web" focusTraversable="false" layoutX="68.0" layoutY="-118.0" prefHeight="841.0" prefWidth="1101.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-118.0" />
+      <AnchorPane prefHeight="723.0" prefWidth="206.0" style="-fx-background-color: #393351; -fx-border-width: 0 6 0 0; -fx-border-color: #2F2B43;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="timetableField" layoutX="12.0" layoutY="649.0" prefHeight="25.0" prefWidth="176.0" promptText="Timetable Link" />
+            <Button layoutX="12.0" layoutY="684.0" mnemonicParsing="false" onAction="#loadTimetableLink" prefHeight="25.0" prefWidth="83.0" text="Load Link" />
+            <TextField fx:id="semesterField" layoutX="12.0" layoutY="613.0" prefHeight="25.0" prefWidth="176.0" promptText="Year &amp; Semester" />
+            <Button layoutX="103.0" layoutY="684.0" mnemonicParsing="false" onAction="#screenshotTimetable" prefHeight="25.0" prefWidth="83.0" text="Screenshot" />
+            <ListView fx:id="timetableList" layoutX="7.0" layoutY="94.0" prefHeight="200.0" prefWidth="186.0" style="-fx-background-color: #2F2B43; -fx-padding: 5 5 5 5; -fx-border-radius: 0;" stylesheets="@../StyleSheets/styling.css" />
+            <Button layoutX="45.0" layoutY="391.0" mnemonicParsing="false" onAction="#loadTimetable" text="Load" />
+            <Label layoutX="23.0" layoutY="65.0" style="-fx-text-fill: #1a84d0; -fx-font-size: 20;" text="Saved Timetables" textFill="#687eeb" />
+            <Button layoutX="124.0" layoutY="391.0" mnemonicParsing="false" onAction="#deleteTimetable" text="Delete" />
+         </children></AnchorPane>
       <Pane layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox prefHeight="31.0" prefWidth="1183.0" style="-fx-background-color: #2F2B43;">
+            <HBox prefHeight="31.0" prefWidth="1160.0" style="-fx-background-color: #2F2B43;">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="112.0" style="-fx-text-fill: #1a84d0; -fx-font-size: 20;" text="TempNUS">
+                  <Label alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#returnHome" prefHeight="31.0" prefWidth="117.0" style="-fx-text-fill: #1a84d0; -fx-font-size: 20;" text="TempNUS" textFill="#343054">
                      <font>
                         <Font name="SansSerif Regular" size="20.0" />
                      </font>
                   </Label>
-                  <Pane prefHeight="31.0" prefWidth="1014.0" />
-                  <Button alignment="TOP_CENTER" minHeight="31.0" minWidth="39.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="46.0" style="-fx-background-color: transparent; -fx-font-size: 20;" />
+                  <Pane prefHeight="31.0" prefWidth="1028.0" />
+                  <Button alignment="TOP_CENTER" minHeight="31.0" minWidth="36.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" prefHeight="31.0" prefWidth="36.0" style="-fx-background-color: transparent; -fx-font-size: 20;" />
                </children>
             </HBox>
             <SVGPath content="M116.973 118.027 L 107.096 128.055 143.027 164.027 L 178.958 200.000 143.001 235.999 L 107.045 271.997 117.524 282.476 L 128.003 292.955 164.001 256.999 L 200.000 221.042 235.999 256.999 L 271.997 292.955 282.476 282.476 L 292.955 271.997 256.999 235.999 L 221.042 200.000 256.999 164.001 L 292.955 128.003 282.476 117.524 L 271.997 107.045 235.999 143.001 L 200.000 178.958 164.480 143.479 C 123.238 102.286,129.287 105.526,116.973 118.027" disable="true" fill="#1a84d0" layoutX="944.0" layoutY="-185.0" scaleX="0.08" scaleY="0.08" />
