@@ -14,7 +14,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1160.0" style="-fx-background-color: #343054;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tempnus.ui.TimetableGUI">
    <children>
-      <ImageView fx:id="image" fitHeight="841.0" fitWidth="1101.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-118.0" />
+      <ImageView fx:id="image" fitHeight="841.0" fitWidth="1092.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-118.0" />
       <WebView fx:id="web" focusTraversable="false" layoutX="68.0" layoutY="-118.0" prefHeight="841.0" prefWidth="1101.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-118.0" />
       <AnchorPane prefHeight="723.0" prefWidth="206.0" style="-fx-background-color: #393351; -fx-border-width: 0 6 0 0; -fx-border-color: #2F2B43;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -23,9 +23,9 @@
             <TextField fx:id="semesterField" layoutX="12.0" layoutY="613.0" prefHeight="25.0" prefWidth="176.0" promptText="Year &amp; Semester" />
             <Button layoutX="103.0" layoutY="684.0" mnemonicParsing="false" onAction="#screenshotTimetable" prefHeight="25.0" prefWidth="83.0" text="Screenshot" />
             <ListView fx:id="timetableList" layoutX="7.0" layoutY="94.0" prefHeight="200.0" prefWidth="186.0" style="-fx-background-color: #2F2B43; -fx-padding: 5 5 5 5; -fx-border-radius: 0;" stylesheets="@../StyleSheets/styling.css" />
-            <Button layoutX="45.0" layoutY="391.0" mnemonicParsing="false" onAction="#loadTimetable" text="Load" />
+            <Button layoutX="12.0" layoutY="391.0" mnemonicParsing="false" onAction="#loadTimetable" prefHeight="25.0" prefWidth="83.0" text="Load" />
             <Label layoutX="23.0" layoutY="65.0" style="-fx-text-fill: #1a84d0; -fx-font-size: 20;" text="Saved Timetables" textFill="#687eeb" />
-            <Button layoutX="124.0" layoutY="391.0" mnemonicParsing="false" onAction="#deleteTimetable" text="Delete" />
+            <Button layoutX="103.0" layoutY="391.0" mnemonicParsing="false" onAction="#deleteTimetable" prefHeight="25.0" prefWidth="83.0" text="Delete" />
          </children></AnchorPane>
       <Pane layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
