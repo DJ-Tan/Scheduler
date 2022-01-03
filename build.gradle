@@ -24,6 +24,7 @@ dependencies {
     implementation ('org.controlsfx:controlsfx:11.1.1')
     implementation 'com.dlsc.formsfx:formsfx-core:11.4.2'
     implementation 'org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0'
+    implementation 'org.postgresql:postgresql:42.3.1'
     testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.8.2'
     testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.8.2'
 }
