@@ -5,12 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import tempnus.logic.SQL;
 
 import java.io.IOException;
 
 public class TempNus extends Application {
 
-    private static final String LOGIN_VIEW = "/layout/profile_view.fxml";
+    private static final String LOGIN_VIEW = "/layout/calendar_view.fxml";
     private double xOffset = 0;
     private double yOffset = 0;
 
@@ -36,6 +37,8 @@ public class TempNus extends Application {
     }
 
     public static void main(String[] args) {
+        SQL conn = new SQL("org.postgresql.Driver","jdbc:postgresql://ec2-54-162-211-113.compute-1.amazonaws.com:5432/dh72nrvttlqg","zbnzkulsrarhta","1a9f5b22c25b541f29861237103ce39392dc3284f285d82301c3914c779d922d");
+        conn.getConnection();
         launch();
     }
 
