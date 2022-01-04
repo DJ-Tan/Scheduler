@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="17">
       <module name="Coding Projects.Scheduler.main" target="17" />
+      <module name="Test" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

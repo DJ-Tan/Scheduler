@@ -2,11 +2,9 @@ package tempnus.ui;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.SnapshotParameters;
-import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -15,8 +13,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.transform.Transform;
 import javafx.scene.web.WebView;
-import javafx.stage.Stage;
 import javafx.util.Callback;
 import tempnus.logic.CommonControls;
 import javafx.embed.swing.SwingFXUtils;
@@ -24,7 +22,6 @@ import tempnus.logic.Timetable;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.awt.image.RenderedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -87,6 +84,7 @@ public class TimetableGUI extends CommonControls implements Initializable {
         if (!filename.isBlank()) {
             SnapshotParameters snapshotParameters = new SnapshotParameters();
             snapshotParameters.setFill(Color.TRANSPARENT);
+            snapshotParameters.setTransform(Transform.scale(5.0,5.0));
             File captureFile = new File ( "src/main/resources/drawable/savedTimetables/" + filename + ".png");
             WritableImage image = web.snapshot(snapshotParameters, null);
             BufferedImage bufferedImage = SwingFXUtils.fromFXImage(image, null);
@@ -138,5 +136,7 @@ public class TimetableGUI extends CommonControls implements Initializable {
             }
         }
         timetableList.setItems(timetables);
+        timetableList.getSelectionModel().select(0);
+        loadTimetable();
     }
 }
