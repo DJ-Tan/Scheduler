@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import jfxtras.scene.control.*?>
+
+<TabPane xmlns:fx="http://javafx.com/fxml">
+	<tabs>
+		<Tab id="defaultTab" text="tab1">
+			<LocalTimePicker id="defaultPicker"/>
+		</Tab>
+		<Tab id="slideStep15Tab" text="tab2">
+			<LocalTimePicker id="slideStep15Picker" minuteStep="15" secondStep="15"/>
+		</Tab>
+		<Tab id="localeTab" text="tab3">
+			<LocalTimePicker id="localePicker" locale="de"/>
+		</Tab>
+    </tabs>
+</TabPane>

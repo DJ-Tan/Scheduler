@@ -1,0 +1,117 @@
+/**
+ * Copyright (c) 2011-2021, JFXtras
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *    Redistributions of source code must retain the above copyright
+ *       notice, this list of conditions and the following disclaimer.
+ *    Redistributions in binary form must reproduce the above copyright
+ *       notice, this list of conditions and the following disclaimer in the
+ *       documentation and/or other materials provided with the distribution.
+ *    Neither the name of the organization nor the
+ *       names of its contributors may be used to endorse or promote products
+ *       derived from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL JFXTRAS BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+.background-gradient {
+	-fx-background-color:
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+}
+
+.leftBox {
+	-fx-background-color:
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+}
+
+.button-not-now {
+    -fx-background-color:
+        linear-gradient(
+            derive(grey, 120%), 
+            derive(grey, 90%)
+        ),
+        radial-gradient(
+            center 50% -40%, 
+            radius 180%, 
+            derive(grey, 95%) 55%, 
+            derive(grey, 75%) 55%
+        );
+    -fx-background-radius: 4, 3;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.55) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: derive(grey, -60%);
+    -fx-padding: 3 11 3 11;
+
+}
+
+
+.background-grid {
+    -fx-background-image: url("CoarseGrid.png");
+    -fx-background-repeat: repeat;
+}
+
+.background3 {
+    -fx-background-color: gainsboro;
+}
+
+.simple-border {
+  -fx-border-color: black;
+  -fx-border-width: 1;
+  -fx-padding: 0 10 10 10;
+}
+
+.simple-border:disabled {
+  -fx-border-color: grey;
+}
+
+.simple-border2 {
+  -fx-border-color: black;
+  -fx-border-width: 1;
+  -fx-padding: 5 5 5 5;
+}
+
+.bordered-titled-border {
+  -fx-content-display: top;
+  -fx-padding: 0 10 10 10;
+  -fx-background-color: transparent;
+  -fx-border-color: black;
+  -fx-border-width: 1;
+}
+
+.bordered-titled-border:disabled {
+  -fx-border-color: transparent;
+}
+
+.bordered-titled-title {
+  -fx-translate-y: -8;
+  -fx-font-size: 10;
+  -fx-padding: 0 5 0 5;
+  -fx-background-color: gainsboro;
+}
+
+
+.title-font {
+	-fx-font-size: 24;
+}
+
+.table-view .column-header .label {
+  -fx-text-alignment: center;
+ }
+  
+ .centered-column {
+ 	-fx-alignment: CENTER
+ }

@@ -13,7 +13,10 @@ repositories {
 
 dependencies {
     implementation 'org.openjfx:javafx-web:17.0.0.1'
-    implementation ('org.jfxtras:jfxtras-all:10.0-r1')
+    implementation group: 'org.mnode.ical4j', name: 'ical4j', version: '4.0.0-alpha2'
+    implementation group: 'org.jfxtras', name: 'jfxtras-controls', version: '15-r2'
+    implementation group: 'org.jfxtras', name: 'jfxtras-icalendarfx', version: '15-r2'
+    implementation group: 'org.jfxtras', name: 'jfxtras-icalendaragenda', version: '15-r2'
     implementation ('org.openjfx:javafx-swing:17.0.0.1')
     implementation ('org.openjfx:javafx-controls:17.0.0.1')
     implementation ('org.openjfx:javafx:17.0.0.1')
@@ -24,6 +27,11 @@ dependencies {
     implementation ('org.controlsfx:controlsfx:11.1.1')
     implementation 'com.dlsc.formsfx:formsfx-core:11.4.2'
     implementation 'org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0'
+    implementation 'com.calendarfx:calendar:11.10.1'
+    implementation 'com.calendarfx:view:11.10.1'
+    implementation 'commons-logging:commons-logging:1.2'
+    implementation 'commons-lang:commons-lang:2.6'
+    implementation 'backport-util-concurrent:backport-util-concurrent:3.1'
     implementation 'org.postgresql:postgresql:42.3.1'
     testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.8.2'
     testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.8.2'

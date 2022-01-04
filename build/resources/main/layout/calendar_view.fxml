@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.calendarfx.view.CalendarView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckListView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1160.0" stylesheets="@../StyleSheets/styling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tempnus.ui.CalendarGUI">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="723.0" prefWidth="206.0" style="-fx-background-color: #393351; -fx-border-width: 0 6 0 0; -fx-border-color: #2F2B43;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="954.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <MenuButton layoutX="64.0" layoutY="120.0" mnemonicParsing="false" text="Timescale">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#showWeekPage" text="Week" />
+                  <MenuItem mnemonicParsing="false" onAction="#showMonthPage" text="Month" />
+                  <MenuItem mnemonicParsing="false" onAction="#showYearPage" text="Year" />
+               </items>
+            </MenuButton>
+            <TextField fx:id="calendarName" layoutX="32.0" layoutY="239.0" />
+            <Button layoutX="32.0" layoutY="281.0" mnemonicParsing="false" onAction="#fileSelector" text="Button" />
+            <CheckListView fx:id="calendarList" layoutX="5.0" layoutY="341.0" prefHeight="366.0" prefWidth="197.0" />
+            <TextField fx:id="fileLoc" layoutX="32.0" layoutY="207.0" />
+            <Button layoutX="129.0" layoutY="281.0" mnemonicParsing="false" onAction="#importCalendar" text="Import" />
+         </children></AnchorPane>
+      <CalendarView fx:id="calendarView" layoutX="206.0" layoutY="24.0" prefHeight="697.0" prefWidth="954.0" showAddCalendarButton="false" showPageToolBarControls="false" showPrintButton="false" showSearchField="false" showSourceTrayButton="false" showToolBar="false" />
+      <Pane layoutX="20.0" layoutY="20.0" prefHeight="31.0" prefWidth="1160.0" AnchorPane.bottomAnchor="689.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="31.0" prefWidth="1160.0" style="-fx-background-color: #2F2B43;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#returnHome" prefHeight="31.0" prefWidth="117.0" style="-fx-text-fill: #1a84d0; -fx-font-size: 20;" stylesheets="@../StyleSheets/styling.css" text="TempNUS" textFill="#343054">
+                     <font>
+                        <Font name="SansSerif Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="31.0" prefWidth="1028.0" />
+                  <Button alignment="TOP_CENTER" minHeight="31.0" minWidth="36.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" prefHeight="31.0" prefWidth="36.0" style="-fx-background-color: transparent; -fx-font-size: 20;" />
+               </children>
+            </HBox>
+            <SVGPath content="M116.973 118.027 L 107.096 128.055 143.027 164.027 L 178.958 200.000 143.001 235.999 L 107.045 271.997 117.524 282.476 L 128.003 292.955 164.001 256.999 L 200.000 221.042 235.999 256.999 L 271.997 292.955 282.476 282.476 L 292.955 271.997 256.999 235.999 L 221.042 200.000 256.999 164.001 L 292.955 128.003 282.476 117.524 L 271.997 107.045 235.999 143.001 L 200.000 178.958 164.480 143.479 C 123.238 102.286,129.287 105.526,116.973 118.027" disable="true" fill="#1a84d0" layoutX="944.0" layoutY="-185.0" scaleX="0.08" scaleY="0.08" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
