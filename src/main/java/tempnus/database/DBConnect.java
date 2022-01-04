@@ -1,6 +1,9 @@
 package tempnus.database;
 
+import tempnus.logger.AppLogger;
+
 import java.sql.*;
+import java.util.logging.Level;
 
 public class DBConnect {
 
@@ -13,13 +16,17 @@ public class DBConnect {
      *
      * @param query Select query to be executed.
      * @return Result set of values from the query.
-     * @throws SQLException If there is an error connecting to the database.
      */
-    public static ResultSet selectQuery(String query) throws SQLException {
-        Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
-        Statement stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery(query);
-        conn.close();
+    public static ResultSet selectQuery(String query) {
+        ResultSet rs = null;
+        try {
+            Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
+            Statement stmt = conn.createStatement();
+            rs = stmt.executeQuery(query);
+            conn.close();
+        } catch (SQLException e) {
+            AppLogger.log(Level.SEVERE, e.getMessage());
+        }
         return rs;
     }
 
@@ -27,12 +34,15 @@ public class DBConnect {
      * Executes a query that modifies the database.
      *
      * @param query Modifying query to be executed.
-     * @throws SQLException If there is an error connecting to the database.
      */
-    public static void modifyQuery(String query) throws SQLException {
-        Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
-        Statement stmt = conn.createStatement();
-        stmt.executeQuery(query);
-        conn.close();
+    public static void modifyQuery(String query) {
+        try {
+            Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
+            Statement stmt = conn.createStatement();
+            stmt.executeQuery(query);
+            conn.close();
+        } catch (SQLException e) {
+            AppLogger.log(Level.SEVERE, e.getMessage());
+        }
     }
 }
